@@ -1,0 +1,89 @@
+Para incluir anuncios (o cualquier tipo de contenido) en este tema, sólo necesitas copiar cualquier código dado en cualquiera de los archivos de este directorio, dependiendo de donde quieras que aparezcan (los nombres de archivo se explican por sí mismos). Sólo ten en cuenta que la mayoría de bloques aparecerán sólo una vez, a excepción de los siguientes. Los archivos after-post*.php y before-post*.php se repetirán para cada entrada devuelta (sólo una en vista de entrada individual o de página, normalmente más en index, archivos, categorías...). After-post-paragraph.php y before-post-paragraph.php se repetirán después/antes de cada párrafo (etiquetas <p>, <ul>, <ol> y <blockquote>) para cada entrada devuelta. After-comment*.php y before-comment*.php se repetirán para cada comentario devuelto (sólo en vista de entrada única o de página).
+
+Los archivos before-body-close-tag.php, after-body-open-tag.php y before-head-close-tag.php son útiles para incluir el código JavaScript requerido por algunos servicios (estadísticas web, seguimiento, etc).
+
+Puedes añadir elementos al menú horizontal con los archivos after-menu.php y before-menu.php. Sólo recuerda incluirlos como elementos de lista, por ejemplo:
+
+<li><a href="http://www.domain.com/section/">Otra sección</a></li>
+
+Puedes usar PHP y funciones y variables de Wordpress de tal forma que puedas dirigir tus anuncios a cualquier tipo específico de colocación.
+
+Puedes añadir estilos adicionales al inicio o al final del archivo externo CSS gracias a los archivos before-css.php y after-css.php. Al ser un archivo externo, las funciones de WordPress no estarán disponibles para estos archivos (aunque las funciones del tema usadas en style.php sí que lo estarán). Análogamente puedes añadir código adicional al archivo externo de JavaScript gracias a los archivos before-js.php y after-js.php (de nuevo, las funciones de WordPress no estarán disponibles para estos archivos).
+
+Para usuarios AdSense recomiendo usar un leaderboard en el archivo after-header.php y banners para los 2 primeros posts en el archivo after-post*.php o before-post*.php.
+
+*** VARIABLES ÚTILES ***
+
+(archivos after-post*.php o before-post*.php)
+
+$wp_query->current_post - Número de entrada actual, empezando por 0
+$wp_query->post_count - Cantidad total de entradas devueltas
+$wp_query->current_paragraph - Número de párrafo actual, empezando por 0
+$wp_query->paragraph_count - Cantidad total de párrafos en la entrada actual
+
+(archivos after-comment*.php o before-comment*.php)
+
+$wp_query->current_comment - Número de comentario actual, empezando por 0
+$wp_query->comment_count - Cantidad total de comentarios devueltos
+
+*** FUNCTIONS ÚTILES ***
+
+is_home() - Devuelve verdadero cuando se está en la página de inicio, falso en caso contrario
+is_404() - Entradas no encontradas
+is_single() - Única entrada
+is_page() - Única página
+is_category() - Entradas para una categoría
+obt_is_tag() - Entradas para una etiqueta (cuando se usa Simple Tagging Plugin)
+is_author() - Entradas para un blogger determinado
+is_date() - Entradas para un determinado año/mes/día
+is_search() - Resultados de búsqueda
+
+*** ALGUNOS EJEMPLOS ***
+
+- MOSTRAR ANUNCIOS SÓLO EN LAS DOS PRIMERAS ENTRADAS (archivos after-post*.php o before-post*.php)
+
+<?php IF ($wp_query->current_post < 2){ ?>
+...aquí tu código HTML...
+<?php }; ?>
+
+- MOSTRAR ANUNCIOS SÓLO EN LA ÚLTIMA ENTRADA (archivos after-post*.php o before-post*.php)
+
+<?php IF ($wp_query->current_post == ($wp_query->post_count - 1)){ ?>
+...aquí tu código HTML...
+<?php }; ?>
+
+- MOSTRAR ANUNCIOS DESPUÉS DEL PRIMER PÁRRAFO EN LAS DOS PRIMERAS ENTRADAS (archivo after-post-paragraph.php)
+
+<?php IF ($wp_query->current_post < 2 && $wp_query->current_paragraph == 0){ ?>
+...aquí tu código HTML...
+<?php }; ?>
+
+- MOSTRAR ANUNCIOS ANTES DEL ÚLTIMO PÁRRAFO EN LAS DOS PRIMERAS ENTRADAS (archivo before-post-paragraph.php)
+
+<?php IF ($wp_query->current_post < 2 && $wp_query->current_paragraph == ($wp_query->paragraph_count - 1)){ ?>
+...aquí tu código HTML...
+<?php }; ?>
+
+- MOSTRAR ANUNCIOS SÓLO EN UNA CATEGORÍA DADA
+
+<?php IF (is_category() && (single_cat_title("",false) == "Nombre de Categoría")){ ?>
+...aquí tu código HTML..
+<?php }; ?>
+
+- MOSTRAR ANUNCIOS SÓLO EN UNA ETIQUETA DADA (usando Simple Tagging Plugin)
+
+<?php IF (is_tag()){ IF (STP_GetCurrentTagSet() == "Nombre de Etiqueta"){ ?>
+...aquí tu código HTML...
+<?php };}; ?>
+
+- MOSTRAR ANUNCIOS SÓLO EN LA PÁGINA DE UN DETERMINADO BLOGGER
+
+<?php IF (is_author() && (get_the_author() == "Nombre de Blogger")){ ?>
+...aquí tu código HTML...
+<?php }; ?>
+
+- MOSTRAR ANUNCIOS SÓLO PARA UNA BÚSQUEDA DETERMINADA
+
+<?php IF (is_search() && (strtolower($s) == "frase de búsqueda")){ ?>
+...aquí tu código HTML...
+<?php }; ?>

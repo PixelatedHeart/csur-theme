@@ -1,0 +1,325 @@
+/*
+theme name: Plantilla programas (con comentarios y con botones)
+theme uri: http://es.1blogtheme.com/
+description: 1 Blog Theme es un tema para WordPress con un dise&ntilde;o limpio, simple y cl&aacute;sico. Su disposici&oacute;n incluye un men&uacute; horizontal, una barra lateral de 3 partes (una &uacute;nica columna seguida de dos columnas) y un pie de p&aacute;gina con 3 columnas. Ve a <em>Presentaci&oacute;n > Configurar 1 Blog Theme</em> y elige entre las diversas opciones de personalizaci&oacute;n.
+author: Javier Garc&iacute;a
+author uri: http://1blogr.com/
+version: 1.2.1
+
+Licencia: Reconocimiento - No Comercial - Compartir Igual 2.5 - http://creativecommons.org/licenses/by-nc-sa/2.5/es/
+Debes mantener los enlaces de atribución (1 Blog Theme y 1Blogr) tanto si modificas este tema como si no.
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: .75em/1.35em "Trebuchet MS", Verdana, "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, sans-serif;
+	border-top: 3px solid #114a8d;
+	background: transparent url(img/back-body.gif) 0 0 repeat-x;
+}
+
+#wrapper {
+	width: 996px;
+	position: absolute;
+	left: 50%;
+	margin-left: -490px;
+}
+
+.clear {
+	clear: both;
+}
+
+.bordernone {
+	border: none;
+}
+
+.imgblog {
+	float: left;
+	width: 150px;
+	padding: 3px;
+	border: 2px solid #cfcfcf;
+	margin: 0 10px 10px 0;
+}
+
+.skip {
+	display: none;
+}
+
+.destacado {
+	font-weight: bold;
+}
+
+.videolink {
+	background: transparent url(img/ico_vervideo-trans.png) center left no-repeat;
+	padding: 2px 0 2px 25px;
+}
+
+.post {
+	border: 1px solid #d1d1d1;
+	padding: 10px 25px;
+}
+
+.banner {
+	padding: 10px 0;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	margin: 15px 0;
+}
+
+.rsslink {
+	background: transparent url(img/ico_rss.png) center left no-repeat;
+	padding: 2px 0 2px 30px;
+}
+
+.tracklink {
+	background: transparent url(img/1243729527_Technorati_16x16.png) center left no-repeat;
+	padding-left: 22px;
+}
+
+.odd {
+	padding-top:15px;
+}
+
+.relatedpost li a {
+	background: transparent url(img/ico_entrada-trans.png) center left no-repeat;
+	padding: 2px 0 2px 30px;
+}
+
+.relatedpost {
+	list-style-type: none;
+}
+
+input.text, .textarea {
+	width: 90%;
+	border: 1px solid #d1d1d1;
+	padding: 5px;
+	margin: 5px 0;
+	color: #7f7f7f;
+}
+
+a img {
+	border: none;
+}
+
+ol, ul {
+	margin: 20px 0 20px 20px;
+}
+
+.nobullet {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+ol li, ul li {
+	margin-top: 10px;
+}
+
+h2, h3, h4, h5 {
+	color: #ee3b33;
+	border-bottom: 1px dashed #cfcfcf;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h4, h5 {
+	color: #464648;
+}
+
+h4.blogid {
+	margin: 0 !important;
+}
+
+a {
+	color: #114a8d;
+}
+
+a:visited {
+	color: #74a6cf;
+}
+
+a:hover {
+	color: #ee3b33;
+}
+
+p {
+	margin: 10px 0;
+}
+
+#header {
+	background: transparent url(img/background-cabecera.jpg) 0 0 no-repeat;
+	height: 140px;
+}
+
+#header h1.titulo {
+	display: none;
+}
+
+#header ul {
+	list-style-type: none;
+	padding-top: 115px;
+	margin: 0;
+}
+
+#header ul li {
+	display: inline;
+	margin: 0;
+}
+
+#header ul li a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	background-color: #f9f9f9;
+	padding: 5px 0 5px 45px;
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid #d1d1d1;
+	height: 17px;
+}
+
+#header ul li a:hover {
+	text-decoration: underline;
+}
+
+#header ul li a.last {
+	padding-right: 45px;
+}
+
+#maincont {
+	padding-top: 25px;
+}
+
+#cont {
+	width: 500px;
+	float: left;
+}
+
+body.entrada #cont {
+	width: 600px;
+}
+
+body.mainblogs #cont {
+	width: 100%;
+	float: none;
+}
+
+#cabecera {
+	width: 74%;
+	float:left;
+	margin-left:10px;
+}
+
+#destacados {
+	width: 16%;
+	float: right;
+	padding: 0;
+	padding-right: 55px;
+}
+
+.maincol1 {
+	width: 35%;
+	float: left;
+	margin-right: 15px;
+	padding: 0 10px;
+}
+
+.listadoentradas p img {
+	width: 50px;
+	float: left;
+	margin: 0 5px 10px 0;
+	padding: 5px;
+	border: 1px solid #d1d1d1;
+}
+
+.flr {
+	width: 20%;
+	float: right;
+	padding: 0;
+}
+
+.listadoentradas li {
+	clear: both;
+	margin-bottom: 35px;
+}
+
+.post p img {
+	float: left;
+	padding: 5px;
+	border: 1px solid #d1d1d1;
+	width: 150px;
+	margin: 0 10px 0 0;
+}
+
+#sidebar {
+	width: 400px;
+	float: right;
+	border: 1px solid #d1d1d1;
+	padding: 10px 25px;
+}
+
+body.entrada #sidebar {
+	width: 300px;
+}
+
+.blogdestacado {
+	clear: both;
+	margin: 0 0 15px 0;
+}
+
+.blogdestacado a {
+	text-decoration: none;
+}
+
+.blogdestacado h4, .blogdestacado h5 {
+	border: none;
+}
+
+.blogdestacado p img {
+	width: 50px;
+	float: left;
+	margin: 0 10px 15px 0;
+	padding: 5px;
+	border: 1px solid #d1d1d1;
+}
+
+.col1 {
+	width: 47%;
+	float: left;
+}
+
+.col2 {
+	width: 47%;
+	float: left;
+	margin-left: 15px;
+}
+
+#footer {
+	border-top: 3px double #cfcfcf;	
+	padding: 20px 0;
+	margin: 15px 0;
+}
+
+.footeritem {
+	width: 300px;
+	float: left;
+	margin-right: 25px;
+}
+
+.footeritem h5 img {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.footeritem h5 {
+	border: none;
+}
+
+.creditos {
+	padding-top: 20px;
+}
+
+.creditos p {
+	border-top: 3px solid #cfcfcf;
+}

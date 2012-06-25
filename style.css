@@ -1,0 +1,431 @@
+/*
+theme name: Tema Canal Sur
+theme uri: http://mecus.es/temas/
+description: Plantilla para temas de Canal Sur 
+author: Mecus
+author uri: http://mecus.es/
+version: 2.0
+
+Licencia: GPL.
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 996px;
+	position: absolute;
+	left: 50%;
+	margin-left: -498px;
+}
+
+.clear {
+	clear: both;
+}
+
+.bordernone {
+	border: none;
+}
+
+.imgblog {
+	float: left;
+	width: 150px;
+	padding: 3px;
+	border: 2px solid #cfcfcf;
+	margin: 0 10px 10px 0;
+}
+
+.skip {
+	display: none;
+}
+
+.destacado {
+	font-weight: bold;
+}
+
+.videolink {
+	background: transparent url(img/ico_vervideo-trans.png) center left no-repeat;
+	padding: 2px 0 2px 25px;
+}
+
+.banner {
+	padding: 10px 0;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	margin: 15px 0;
+}
+
+.rsslink {
+	background: transparent url(img/ico_rss.png) center left no-repeat;
+	padding: 2px 0 2px 30px;
+}
+
+.tracklink {
+	background: transparent url(img/1243729527_Technorati_16x16.png) center left no-repeat;
+	padding-left: 22px;
+}
+
+.odd {
+	background-color: #eff6ff;
+}
+
+.relatedpost li a {
+	background: transparent url(img/ico_entrada-trans.png) center left no-repeat;
+	padding: 2px 0 2px 30px;
+}
+
+.relatedpost {
+	list-style-type: none;
+}
+
+input.text, .textarea {
+	text-align: left;
+	border: 1px solid #d1d1d1;
+	padding: 5px;
+	margin: 5px 0;
+	color: #7f7f7f;
+}
+
+a img {
+	border: none;
+}
+
+ol, ul {
+	margin: 20px 0 20px 20px;
+}
+
+.nobullet {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+ol li, ul li {
+	margin-top: 10px;
+}
+
+h2{
+	/*color: #4d729a;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	line-height:1.3em;
+}
+
+h3, h4, h5 {
+	/*color: #4d729a;*/
+	border-bottom: 1px dashed #cfcfcf;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	line-height:1.3em;
+}
+
+h3 a, h4 a, h5 a, h3 a:visited, h4 a:visited, h5 a:visited {
+	/*color: #4d729a;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	line-height:1.3em;
+}
+
+h3 a:hover, h4 a:hover, h5 a:hover {
+	/*color: #4d729a;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+	line-height:1.3em;
+}
+
+h2 a, h2 a:visited{
+	/*color: #4d729a;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	line-height:1.4em;
+}
+
+h2 a:hover{
+	/*color: #4d729a;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+	line-height:1.4em;
+}
+
+h4, h5 {
+	color: #464648;
+}
+
+h4.blogid {
+	margin: 0 !important;
+}
+
+
+p {
+	margin: 10px 0;
+}
+
+
+#header h1.titulo {
+	display: none;
+}
+
+#header ul {
+	list-style-type: none;
+	margin-top: -4px;
+	/*padding-top: 115px;*/
+	margin-left: 0;
+	background-color: #f9f9f9;
+	height: 17px;
+	padding: 5px 0 5px 0;
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid #d1d1d1;
+	text-align:center;
+	
+	
+}
+
+#header ul li {
+	display: inline;
+	margin: 0;
+}
+
+#header ul li a {
+	text-decoration: none;
+	height: 17px;
+	padding: 2px 22px 5px 22px;
+}
+
+#header ul li a:hover {
+	text-decoration: underline;
+}
+
+
+#maincont {
+	/*padding-top: 25px;*/
+	width:996px;
+	padding-right:0px;
+}
+
+#cont {
+	width: 630px;
+	float: left;
+}
+
+#contparrilla {
+	width: 996px;
+	float: left;
+}
+
+
+body.mainblogs #cont {
+	width: 100%;
+	float: none;
+}
+
+#cabecera {
+	width: 74%;
+	float:left;
+	margin-left:10px;
+}
+
+#destacados {
+	width: 16%;
+	float: right;
+	padding: 0;
+	padding-right: 55px;
+}
+
+.maincol1 {
+	width: 35%;
+	float: left;
+	margin-right: 15px;
+	padding: 0 10px;
+}
+
+.listadoentradas p img {
+	margin: 0 5px 10px 0;
+	padding: 5px;
+	border: 1px solid #d1d1d1;
+}
+
+.flr {
+	width: 20%;
+	float: right;
+	padding: 0;
+}
+
+.listadoentradas li {
+	clear: both;
+	margin-bottom: 35px;
+}
+
+.post p img {
+	padding: 5px;
+	border: 1px solid #d1d1d1;
+	margin: 0 10px 0 0;
+}
+
+#sidebar {
+	width: 320px;
+	float: right;
+	border: 1px solid #d1d1d1;
+}
+
+body.entrada #sidebar {
+	width: 320px;
+}
+
+.blogdestacado {
+	clear: both;
+	margin: 0 0 15px 0;
+}
+
+.blogdestacado a {
+	text-decoration: none;
+}
+
+.blogdestacado h4, .blogdestacado h5 {
+	border: none;
+}
+
+.blogdestacado p img {
+	width: 50px;
+	float: left;
+	margin: 0 10px 15px 0;
+	padding: 5px;
+	border: 1px solid #d1d1d1;
+}
+
+.col1 {
+	width: 47%;
+	float: left;
+}
+
+.col2 {
+	width: 47%;
+	float: left;
+	margin-left: 15px;
+}
+
+#footer {
+	border-top: 3px double #cfcfcf;	
+	padding: 20px 0;
+	margin: 15px 0;
+}
+
+.footeritem {
+	width: 300px;
+	float: left;
+	margin-right: 25px;
+}
+
+.footeritem h5 img {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.footeritem h5 {
+	border: none;
+}
+
+.creditos {
+	padding-top: 20px;
+}
+
+.creditos p {
+	border-top: 3px solid #cfcfcf;
+}
+
+.categoria_entrada p {
+	padding: 0 0 0 0;
+}
+
+/* required as per wordpress.org */
+
+.aligncenter, div.aligncenter
+{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft
+{
+   float: left;
+   margin-right:10px;
+}
+
+.alignright
+{
+   float: right;
+   margin-left:10px;
+}
+
+.wp-caption {background-color: #eee; text-align: center; padding-top: 4px; border: none;}
+
+.wp-caption-text {margin: 6px 12px; padding-bottom: 5px;}
+
+#calendar_wrap tr, #calendar_wrap th, #calendar_wrap td{
+	border:0 none;
+	font-size:100%;
+	margin:0;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:0;
+	padding:0;
+	line-height:1.5;
+}
+
+#calendar_wrap ol, #calendar_wrap ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+
+#calendar_wrap caption{
+	border:0 none;
+	font-size:100%;
+	margin:0;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:0;
+	padding:0;
+	border-top:1px solid #E6F0F2;
+	text-align:center;
+	line-height:1.5;
+}
+
+#calendar_wrap table {
+	color:#3E5867;
+	font-family:"Lucida Grande","Helvetica Neue",Arial,"Lucida Sans Unicode",sans-serif;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.5;
+	font-size:11px;
+	text-align:center;
+
+}
+
+#calendar_wrap table tbody tr td{
+	padding: 1px 1px;
+}
+
+#calendar_wrap td a {
+	border-bottom-color:#3E5867;
+	color:#C54E0B;
+}
+
+#calendar_wrap td a:hover, #calendar_wrap table tfoot {
+	border-bottom-color:#3E5867;
+	color:#3E5867;
+}
+
+#calendar_wrap thead tr th {
+	color:#3E5867;
+	font-weight:bold;
+}
